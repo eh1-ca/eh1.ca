@@ -12,51 +12,161 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <style>
-  :root {
-    --bs-body-bg: #fff;
-    --bs-color: #212529;
-    --bs-primary: #FF0000;
-  }
-  .bg {
-    background-color: #f8f9fa;
-  }
+body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+:root {
+  --bs-body-bg: #fff;
+  --bs-color: #212529;
+  --bs-primary: #FF0000;
+}
+.bg {
+  background-color: #f8f9fa;
+}
 
-  .leaf {
-      color: #212529; /* Light text for contrast */
-  }
+.primary {
+  color: #FF0000;
+}
+
+.leaf {
+    color: #212529; /* Light text for contrast */
+}
 @media (prefers-color-scheme: dark) {
-    .bg {
-        background-color:  #212529; /*rgb(30, 32, 34); /* Dark mode */
-        color: #f8f9fa; /* Light text for contrast */
-    }
-    .leaf {
+:root {  
+    --bs-body-color: #dee2e6;
+    --bs-body-color-rgb: 222,226,230;
+    --bs-body-bg: #212529;
+    --bs-body-bg-rgb: 33,37,41;
+    --bs-emphasis-color: #fff;
+    --bs-emphasis-color-rgb: 255,255,255;
+    --bs-secondary-color: rgba(222, 226, 230, 0.75);
+    --bs-secondary-color-rgb: 222,226,230;
+    --bs-secondary-bg: #343a40;
+    --bs-secondary-bg-rgb: 52,58,64;
+    --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+    --bs-tertiary-color-rgb: 222,226,230;
+    --bs-tertiary-bg: #2b3035;
+    --bs-tertiary-bg-rgb: 43,48,53;
+    --bs-primary-text-emphasis: #6ea8fe;
+    --bs-secondary-text-emphasis: #a7acb1;
+    --bs-success-text-emphasis: #75b798;
+    --bs-info-text-emphasis: #6edff6;
+    --bs-warning-text-emphasis: #ffda6a;
+    --bs-danger-text-emphasis: #ea868f;
+    --bs-light-text-emphasis: #f8f9fa;
+    --bs-dark-text-emphasis: #dee2e6;
+    --bs-primary-bg-subtle: #031633;
+    --bs-secondary-bg-subtle: #161719;
+    --bs-success-bg-subtle: #051b11;
+    --bs-info-bg-subtle: #032830;
+    --bs-warning-bg-subtle: #332701;
+    --bs-danger-bg-subtle: #2c0b0e;
+    --bs-light-bg-subtle: #343a40;
+    --bs-dark-bg-subtle: #1a1d20;
+    --bs-primary-border-subtle: #084298;
+    --bs-secondary-border-subtle: #41464b;
+    --bs-success-border-subtle: #0f5132;
+    --bs-info-border-subtle: #087990;
+    --bs-warning-border-subtle: #997404;
+    --bs-danger-border-subtle: #842029;
+    --bs-light-border-subtle: #495057;
+    --bs-dark-border-subtle: #343a40;
+    --bs-heading-color: inherit;
+    --bs-link-color: #6ea8fe;
+    --bs-link-hover-color: #8bb9fe;
+    --bs-link-color-rgb: 110,168,254;
+    --bs-link-hover-color-rgb: 139,185,254;
+    --bs-code-color: #e685b5;
+    --bs-highlight-color: #dee2e6;
+    --bs-highlight-bg: #664d03;
+    --bs-border-color: #495057;
+    --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+    --bs-form-valid-color: #75b798;
+    --bs-form-valid-border-color: #75b798;
+    --bs-form-invalid-color: #ea868f;
+    --bs-form-invalid-border-color: #ea868f;
+}
+  .bg {
+      background-color:  #212529; /*rgb(30, 32, 34); /* Dark mode */
       color: #f8f9fa; /* Light text for contrast */
+  }
+  .leaf {
+    color: #f8f9fa; /* Light text for contrast */
   }
     
 }
-  .btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #FF0000;
-    --bs-btn-border-color: #FF0000;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #c80404;
-    --bs-btn-hover-border-color: #a30808;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #ccc;
-    --bs-btn-active-bg: #c80404;
-    --bs-btn-active-border-color: #c80404;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #FF0000;
-    --bs-btn-disabled-border-color: #FF0000;
-    }
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #FF0000;
+  --bs-btn-border-color: #FF0000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #c80404;
+  --bs-btn-hover-border-color: #a30808;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #ccc;
+  --bs-btn-active-bg: #c80404;
+  --bs-btn-active-border-color: #c80404;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #FF0000;
+  --bs-btn-disabled-border-color: #FF0000;
+  }
+
 </style>
-<body class="bg">
-  <div class="d-flex justify-content-center align-items-center" style="height: 90vh;">
-    <div class="container">
-        <h1 class="text-center pb-4">Eh?</h1>
+<body class="bg ">
+  <div class="d-flex justify-content-between px-3 py-2">
+    <div><h1 class="primary">Eh!</h1></div>
+    <div><a href="/index-fr.html">Français</a></div>
+  </div>
+  <div class="d-flex justify-content-center p-2">
+    
+  </div>
+  <div class="container">
+    <div class=" p-5 bg-body rounded border border-1">
+      <h2 class="text-center pb-5"><span class="primary">A</span> Social Network to be Made for Canadians, by Canadians!</h2>
+      <p class="border-start border-4 ps-3 ms-3 border-info">A place where We as Canadians can <b>connect, share, and express freely</b>, while staying true to our values of <b>privacy, fairness, and respect.</b></p>
+      <h2 class="text-center pb-5 pt-5"><span class="primary">W</span>hat Makes Us Different?</h2>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-action"><b>You own your content.</b> Unlike other platforms, we don’t claim ownership of what you post. You create it, you control it. We’re just here to host it.</li>
+          <li class="list-group-item list-group-item-action"><b>No tracking. No AI farming. No hidden agendas.</b> Your data stays yours, and we don’t sell it or use it without your explicit permission.</li>
+          <li class="list-group-item list-group-item-action"><b>Built to match Canadian law.</b> Free speech within legal bounds, full privacy protections, and a community that respects <b>Canadian values</b>.</li>
+      </ul>
+
+      <h2 class="text-center pb-5 pt-5"><span class="primary">N</span>o Ads, No Middlemen</h2>
+      <ul  class="list-group list-group-flush">
+          <li  class="list-group-item list-group-item-action">We won’t <b>inject ads</b> into your feed.</li>
+          <li  class="list-group-item list-group-item-action">Users can <b>choose</b> to post promotional content—but only <b>with full transparency</b> and compliance with Canadian ad laws.</li>
+          <li  class="list-group-item list-group-item-action">Your feed is about <b>what you want to see</b>, not what an algorithm thinks you should.</li>
+      </ul>
+
+      <h2 class="text-center pb-5 pt-5"><span class="primary">P</span>rivacy First, Always</h2>
+      <ul  class="list-group list-group-flush">
+          <li  class="list-group-item list-group-item-action">No invasive tracking, no personal data analysis.</li>
+          <li  class="list-group-item list-group-item-action">We take <b>security seriously</b>—our job is to <b>protect your space, not exploit it.</b></li>
+          <li  class="list-group-item list-group-item-action">Any future <b> features </b> will be opt-in, <b>never automatic.</b></li>
+      </ul>
+
+      <h2 class="text-center pb-5 pt-5"><span class="primary">A</span> True Canadian Experience</h2>
+      <ul  class="list-group list-group-flush">
+          <li  class="list-group-item list-group-item-action">Our platform speaks both English & French—<b>because so do we.</b></li>
+          <li  class="list-group-item list-group-item-action">Community-driven standards: <b>Be nice, be fair, be Canadian.</b></li>
+          <li  class="list-group-item list-group-item-action">Whether you’re an artist, a writer, a business, or just someone who loves sharing their thoughts—this space is for you <b>fellow Canadian</b>.</li>
+      </ul>
+
+      <h2 class="text-center pb-5 pt-5"><span class="primary">Join Us</span></h2>
+      <p class="border-start border-4 ps-3 ms-3 border-info">This isn’t just another social network idea—<b>it’s a call to action.</b> <br> Help us build something meaningful, together!</p>
+
+    </div>
+  </div>
+  <div class="pt-5 d-flex justify-content-center align-items-center align-items-stretch h-100" >
+    <div class="container flex-grow-1">
+        <h2 class="text-center pb-4">Contact</h2>
         <div class="row justify-content-center">
-            <div class="col-md-4 col-sm-8 col-12">
+            <div class="col-md-6 col-sm-12 col-12">
               
                 <form action="send.php" method="post">
                     <div class="mb-3">
@@ -73,8 +183,9 @@
                     </div>
                 </form>
                 <div class="leaf text-center pt-4 d-flex justify-content-center align-items-center">
+                  <span class="fs-6 pe-2">We</span>
                   <i class="fa-brands fa-canadian-maple-leaf fs-5"></i>
-                  <span class="fs-6 ps-2">Made in Canada</span>
+                  <span class="fs-6 ps-2">Canada</span>
                 </div>
             </div>
         </div>
