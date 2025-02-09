@@ -1,4 +1,6 @@
 <?php
+$locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
@@ -17,16 +19,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body = "You have received a new message from the contact form:\n\n" .
             "Name: $name\n" .
             "Email: $email\n" .
-            "Message:\n$message\n";
+            "Message:\n$message\n\n\n" . print_r($_POST, true);
 
     if (mail($to, $subject, $body, $headers)) {
-        header("Location: thank-you.html");
+        if ($locale === 'fr' ) {
+            header("Location: thank-you-fr.html");
+        } else {
+            header("Location: thank-you-en.html");
+        }
         exit();
-    } else {
-      header("Location: error.html");
-      exit();
     }
-} else {
-  header("Location: error.html");
-  exit();
 }
+
+if ($locale === 'fr' ) {
+  header("Location: error-fr.html");
+} else {
+  header("Location: error-en.html");
+}
+exit();
