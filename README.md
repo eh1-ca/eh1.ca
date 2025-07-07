@@ -1,21 +1,21 @@
 # eh1.ca Static Website
 
-This repository contains the static site for [eh1.ca](https://eh1.ca), a Canadian Social Network homepage. It includes basic information about and multilingual support with English and French landing pages.
+This repository contains the static site for [eh1.ca](https://eh1.ca), the homepage of a Canadian social network. It includes basic project information and multilingual support with English and French landing pages.
 
 ## Pages
 
-- `/index-en.html` – English homepage
-- `/index-fr.html` – French (Canadian) homepage
-- `/index.php` – auto detect langage to redirect on french page if visitor uses it.
-- `/send.php` – script that send email with subscribtion information.
+- `/index-en.html` – English homepage  
+- `/index-fr.html` – French (Canadian) homepage  
+- `/index.php` – Auto-detects language and redirects to the French page if preferred  
+- `/send.php` – Script that sends an email with subscription information  
 
-- `/error-en.html` – English error homepage
-- `/error-fr.html` – French (Canadian) error homepage
+- `/error-en.html` – English error page  
+- `/error-fr.html` – French (Canadian) error page  
 
-- `/thank-you-en.html` – English thank you homepage
-- `/thank-you-fr.html` – French (Canadian) thank you homepage
-- `/eh.png` - temporary logo. Will be replaced later.
+- `/thank-you-en.html` – English thank-you page  
+- `/thank-you-fr.html` – French (Canadian) thank-you page  
 
+- `/eh.png` – Temporary logo (to be replaced)
 
 ## Deployment
 
@@ -23,12 +23,12 @@ The site is deployed at [https://eh1.ca](https://eh1.ca). You can fork and adapt
 
 ## Contributing
 
-Pull requests are welcome! If you would like to help translate or improve accessibility, feel free to fork and submit a PR.
+Pull requests are welcome! If you’d like to help with translation or accessibility, feel free to fork and submit a PR.
 
 ### To add or improve content:
-1. Update the corresponding HTML files (`index.html`, `index-fr.html`)
+1. Update the corresponding HTML files (`index-en.html`, `index-fr.html`)
 2. Ensure semantic HTML and proper metadata
-3. For new languages, create a new file using ISO-639-1 code (e.g., `index-es.html` for Spanish)
+3. To add new languages, create a new file using the ISO 639-1 code (e.g., `index-es.html` for Spanish)
 
 ## License
 
